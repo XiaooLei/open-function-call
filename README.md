@@ -1,13 +1,11 @@
-# Open Function Call Assistant
+# Open Function Call framework
 
-The Open Function Call Assistant is a Python-based tool that allows users to interact with various functions through a conversational interface. This example includes integration with a web browser function.
-
+The Open Function Call framework is a Python-based large language model function call framework that allows users to build ai assistant quickly and privide ability similar to OpenAI assistant function call api.
 ## Getting Started
 
 ### Prerequisites
 
 - Python 3.x
-- Dependencies: `glm_client`, `web_brower` (custom module, assumed to be available in your project)
 
 ### Installation
 
@@ -23,8 +21,6 @@ The Open Function Call Assistant is a Python-based tool that allows users to int
 
 ```python
 from open_function_call import Assistant
-from glm_client import GLMHttpClient
-from web_brower import baidu_search
 ```
 
 2. Define your tool list with functions:
@@ -49,10 +45,10 @@ tool_list = [
     }
 ]
 ```
-3. Create instances of necessary classes and run the assistant:
+3. Create instances of necessary classes and run the assistant, demo:
 
 ```python
-glm = GLMHttpClient()
+glm = GLMHttpClient() # this could be any llm interface like Llama, Chat-GLM...
 assistant = Assistant(tool_list=tool_list, llm=glm)
 
 user_input = input(">> ")
